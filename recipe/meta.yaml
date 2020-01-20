@@ -10,7 +10,7 @@ source:
   sha256: faa2148101aef30c31b16750ea36da21d8df29492334dca15be843b7501851f8
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: true  # [win]
 
@@ -36,7 +36,8 @@ test:
     - gwsurrogate
 
 about:
-  home: "https://pypi.org/project/gwsurrogate/"
+  home: "https://github.com/sxs-collaboration/gwsurrogate"
+  dev_url: "https://github.com/sxs-collaboration/gwsurrogate"
   license: "MIT"
   license_family: "MIT"
   license_file: "LICENSE"
