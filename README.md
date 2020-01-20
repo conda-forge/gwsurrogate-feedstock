@@ -1,7 +1,7 @@
 About gwsurrogate
 =================
 
-Home: https://pypi.org/project/gwsurrogate/
+Home: https://github.com/sxs-collaboration/gwsurrogate
 
 Package license: MIT
 
