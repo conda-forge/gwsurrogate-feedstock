@@ -1,5 +1,5 @@
 {% set name = "gwsurrogate" %}
-{% set version = "1.0.8" %}
+{% set version = "1.0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 76ef6e2c798a87f988ee49014701f93cfe3fd5da274dca1a3c5d9fbeb46aa3d4
+  sha256: eb9464f9e3e679e559c2c5b071a6590591d6e8c70012d132e5ae55da2ae7bb89
 
 build:
   number: 0
