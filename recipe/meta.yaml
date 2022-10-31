@@ -10,6 +10,10 @@ source:
   sha256: 713539a69455cc13495462ccd46863d6d7981c845fc269f2cd2127ee8b139103
 
 build:
+  error_overdepending: true
+  error_overlinking: true
+  ignore_run_exports:
+    - numpy
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
@@ -33,10 +37,17 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - python
     - scikit-learn
+    - scipy
 
 test:
+  requires:
+    - pip
   imports:
     - gwsurrogate
+  commands:
+    # check metadata
+    - python -m pip check gwsurrogate
+    - python -m pip show gwsurrogate
 
 about:
   home: https://github.com/sxs-collaboration/gwsurrogate
