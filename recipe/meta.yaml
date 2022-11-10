@@ -38,6 +38,7 @@ requirements:
     - python
     - scikit-learn
     - scipy
+    - wget
 
 test:
   requires:
