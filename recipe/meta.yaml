@@ -1,5 +1,5 @@
 {% set name = "gwsurrogate" %}
-{% set version = "1.1.8" %}
+{% set version = "1.1.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5988fb6c999b7a2e9329144b0fe2f13864c9b6fdcb6206e23b626b0e2bd03c45
+  sha256: 5837d70ae64c5ce5019e630ad1ed5f62131ef43fc740597c9906f55dcf2bc07e
 
 build:
   error_overdepending: true
   error_overlinking: true
   ignore_run_exports:
     - numpy
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
@@ -23,23 +23,20 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
   host:
-    - gsl
     - numpy
     - pip
     - python
     - setuptools
   run:
-    - gsl
     - gwtools
     - h5py
     - python
     - scikit-learn
     - scipy
     - pytest
-    - wget
 
 test:
   requires:
