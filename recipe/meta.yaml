@@ -1,13 +1,13 @@
 {% set name = "gwsurrogate" %}
-{% set version = "1.1.9" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5837d70ae64c5ce5019e630ad1ed5f62131ef43fc740597c9906f55dcf2bc07e
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 316a640576d32aaa45aaf9a6d876b240af356c89131e6af8257039b3818baae8
 
 build:
   error_overdepending: true
