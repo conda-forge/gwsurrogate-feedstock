@@ -14,7 +14,7 @@ build:
   error_overlinking: true
   ignore_run_exports:
     - numpy
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
